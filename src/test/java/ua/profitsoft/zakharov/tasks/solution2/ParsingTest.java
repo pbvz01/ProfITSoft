@@ -42,8 +42,6 @@ class ParsingTest {
 
     @Test
     void successPassParseListTextToMapPopularTags() {
-        System.out.println(Arrays.toString(resultListWithPopularTags.toArray()));
-        System.out.println(Parsing.parseListTextToListPopularTags(sourceListWithText));
         Assert.assertArrayEquals("The lists is not match",
                 resultListWithPopularTags.toArray(),
                 Parsing.parseListTextToListPopularTags(sourceListWithText).toArray());
