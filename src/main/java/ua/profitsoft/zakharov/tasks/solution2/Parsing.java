@@ -8,13 +8,6 @@ import java.util.stream.Collectors;
 
 
 public class Parsing {
-    public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("#ab");
-        list.add("#bb");
-        list.add("#cc");
-        System.out.println(parseListTextToListPopularTags(list));
-    }
     public static List<Tag> parseListTextToListPopularTags (List<String> list) {
         if (list == null) {
             return new ArrayList<>();
@@ -47,7 +40,7 @@ public class Parsing {
             while(matcher.find()) {
                 lineTags.add(matcher.group());
             }
-            lineTags.stream().forEach(x -> tagsList.add(x));
+            tagsList.addAll(lineTags);
         });
 
         return tagsList;
