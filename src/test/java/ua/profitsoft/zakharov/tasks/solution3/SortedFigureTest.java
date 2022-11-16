@@ -31,26 +31,24 @@ class SortedFigureTest {
         sourceFiguresList.add(new Cube(7));
         sourceFiguresList.add(new Sphere(3));
         List<Shape> testList = SortedFigure.getSortedFiguresByVolume(sourceFiguresList);
-        System.out.println(testList);
-        System.out.println(resultFiguresList);
+
         boolean checkingLists = false;
+
         if (testList.size() == resultFiguresList.size()) {
             checkingLists = true;
             for(int i = 0; i < testList.size(); i++) {
                 Shape elementFromTest = testList.get(i);
                 Shape elementFromResult = resultFiguresList.get(i);
-                if ((elementFromTest.getVolume() != elementFromResult.getVolume())
-                || (elementFromTest.getClass() != elementFromResult.getClass())) {
+
+                if (!(elementFromTest.getClass().equals(elementFromResult.getClass()))
+                        || (elementFromTest.getVolume() != elementFromResult.getVolume())) {
                     checkingLists = false;
+                    break;
                 }
             }
 
         }
-
         assertTrue(checkingLists);
-
-
-
     }
 
     @Test
