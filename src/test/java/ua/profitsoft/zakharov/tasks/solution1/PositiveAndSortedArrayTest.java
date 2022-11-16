@@ -7,11 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PositiveAndSortedArrayTest {
     private int[] sourceArray = new int[] { 5, 2, -1, 3, -25, 0, 3};
-    private int[] sortedArray = new int[] { 5, 3, 3, 2, 0};
+    private int[] resultArray = new int[] { 5, 3, 3, 2, 0};
 
         @Test
         void successPassGetSortedAndPositiveArray() {
-        Assertions.assertArrayEquals(sortedArray,
+        Assertions.assertArrayEquals(resultArray,
                 PositiveAndSortedArray.getSortedAndPositiveArray(sourceArray));
         }
 

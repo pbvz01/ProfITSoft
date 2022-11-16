@@ -17,7 +17,6 @@ public class Cube implements Shape {
         return "The cube";
     }
 
-
     @Override
     public String toString() {
         return getNameShape() + ": " + getVolume();

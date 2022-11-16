@@ -24,7 +24,7 @@ public class Tag {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Tag tag = (Tag) o;
-        return reference == tag.reference && name.equals(tag.name);
+        return reference.equals(tag.reference) && name.equals(tag.name);
     }
 
     @Override

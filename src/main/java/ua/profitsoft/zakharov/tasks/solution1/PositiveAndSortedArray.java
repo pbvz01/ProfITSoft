@@ -2,6 +2,7 @@ package ua.profitsoft.zakharov.tasks.solution1;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.stream.Stream;
 
 public class PositiveAndSortedArray {
     public static int[] getSortedAndPositiveArray(int[] array) {
